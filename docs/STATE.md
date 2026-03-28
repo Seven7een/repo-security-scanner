@@ -36,9 +36,9 @@
 - [x] Updated SPEC.md and STATE.md
 
 ### 🔲 Phase 3 (Not Started)
-- [ ] trufflehog integration
-- [ ] Web dashboard
+- [ ] Trace + Scrub pipeline (`git log -S` to find first commit, `git filter-repo` to rewrite)
 - [ ] Finding diff tracking across runs
+- [ ] Local repo path scanning (currently only remote discovery)
 - [ ] Test suite
 
 ### 🚫 Blocked
