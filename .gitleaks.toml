@@ -1,0 +1,8 @@
+# gitleaks configuration for THIS repo (pre-commit)
+# The config/.gitleaks.toml is for scanning target repos
+
+[extend]
+# Uses the default gitleaks rules
+
+[extend.allowlist]
+paths = ['''\.gitleaks\.toml$''', '''\.env\.example$''']

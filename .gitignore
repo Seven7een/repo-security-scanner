@@ -1,0 +1,39 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Internal scratch space
+.internal/
+
+# Python
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# User ignores (personal exclusions, not committed)
+user-ignores.toml
+
+# Output (generated)
+output/
+cache/
