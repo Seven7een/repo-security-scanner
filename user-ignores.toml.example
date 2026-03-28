@@ -1,0 +1,43 @@
+# User-level scan exclusions
+# Copy this to user-ignores.toml and customise for your repos.
+# Mount into the container or place next to .env.
+# This file should NOT be committed — add to .gitignore.
+
+# Gitleaks allowlist patterns (regex)
+# These are added to the gitleaks allowlist at runtime
+[gitleaks_allowlist]
+patterns = [
+    "your-email@example\\.com",
+    ".*@example\\.com",
+]
+
+# File patterns to skip entirely (regex matched against file path)
+[gitleaks_file_excludes]
+patterns = [
+    ".*\\.lock$",
+    ".*lock\\.json$",
+    "package-lock\\.json$",
+    "yarn\\.lock$",
+    "Gemfile\\.lock$",
+    "Pipfile\\.lock$",
+    "poetry\\.lock$",
+    "pnpm-lock\\.yaml$",
+    "composer\\.lock$",
+    "go\\.sum$",
+    "go\\.mod$",
+]
+
+# Rule IDs to suppress entirely
+[gitleaks_rule_excludes]
+rules = [
+    # "pii-phone",
+]
+
+# AI scanner exclusions
+# These are injected into the AI prompt as known-safe patterns
+[ai_exclusions]
+notes = [
+    "your-email@example.com is the repo owner's public email — not a leak",
+    "Any @example.com email is a placeholder — not a leak",
+    "Phone number patterns in lock files are version hashes, not real phone numbers",
+]
